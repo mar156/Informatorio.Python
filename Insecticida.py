@@ -1,5 +1,25 @@
-años_insecticida= int(input('Ingrese la cantidad de años que viene usando el insecticida: '))
-if(años_insecticida<10):
-    print('Intentaremos ayudarte con un nuevo sistema de control de plagas, y cuidaremos el suelo de tu plantación.')
-else:
-    print('Por favor solicite revisión de suelos en su plantación') 
+print ('Colillas al rescate')
+inicio = True
+personas = 0
+menos100= 0
+menos200=0
+mas200=0
+
+while inicio:
+    print('Cantidad colillas: ')
+    colillas= int(input("Colillas: "))
+    if colillas<100:
+        menos100+=colillas
+    elif colillas <200:
+        menos200 +=colillas
+    else:
+        mas200 +=colillas
+    personas +=1
+
+    seguimos = int(input("Seguimos 1-Si 0-No"))
+    if seguimos == 0:
+        inicio=False
+
+print('Cantidad de personas', personas)
+print('%menos de 100 colillas', menos100*100/personas)
+print('FIN')
